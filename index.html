@@ -10,7 +10,14 @@ branch.init('key_live_ndwhygeXNRZLLSAwqs4fubcesDcvmReL', null, function(err, dat
     console.log(data);
 });
 
-var listener = function(event) { console.log("HI THERE:"); }
+var listener = function(event) { 
+  console.log("HI THERE:");
+  branch.track(
+      "SDK Initialized",
+      callback (function(err) {
+        console.log("EVENT WAS FIRED");
+      });
+  );}
 branch.addListener('willShowBanner', listener);
 branch.banner({
     icon: 'http://icons.iconarchive.com/icons/wineass/ios7-redesign/512/Appstore-icon.png',
@@ -53,12 +60,6 @@ branch.deepview({
   }, function(err) {
     console.log(err || 'no error');
 });
-    branch.track(
-      "SDK Initialized",
-      callback (function(err) {
-        console.log("EVENT WAS FIRED");
-      });
-    );
 </script>
 
   </head>

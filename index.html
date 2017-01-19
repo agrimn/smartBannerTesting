@@ -10,7 +10,9 @@ branch.init('key_live_ndwhygeXNRZLLSAwqs4fubcesDcvmReL', null, function(err, dat
     console.log(data);
     branch.track(
       "SDK Initialized",
-      callback (err)
+      callback (function(err) {
+        console.log("EVENT WAS FIRED");
+      });
     );
 });
 

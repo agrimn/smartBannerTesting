@@ -13,7 +13,7 @@ branch.init('key_live_ndwhygeXNRZLLSAwqs4fubcesDcvmReL', null, function(err, dat
 var listener = function(event) { 
   console.log("HI THERE:");
   branch.track(
-      "SDK Initialized",
+      "sdkinitialized",
   );}
 branch.addListener('willShowBanner', listener);
 branch.banner({

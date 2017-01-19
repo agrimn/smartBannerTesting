@@ -5,58 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript">
-(function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode banner closeBanner creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setIdentity track validateCode".split(" "), 0);
-branch.init('key_live_ndwhygeXNRZLLSAwqs4fubcesDcvmReL', null, function(err, data) {
-    if(data) {
-      branch.track("websdk_init");
-    }
-});
-
-var listener = function(event) { 
-  console.log("HI THERE:");
-}
-branch.addListener('willShowBanner', listener);
-branch.banner({
-    icon: 'http://icons.iconarchive.com/icons/wineass/ios7-redesign/512/Appstore-icon.png',
-    title: 'Branch Demo App',
-    description: 'The Branch demo app!',
-    rating: 5,                              // Displays a star rating out of 5. Supports half stars through increments of .5
-    reviewCount: 1500,                      // Amount of reviews your app has received next to the star rating
-    theme: 'light',                         // Overrides the default color theme of the banner. Possible values 'light' or 'dark'.
-    openAppButtonText: 'Open',              // Text to show on button if the user has the app installed
-    downloadAppButtonText: 'Download',      // Text to show on button if the user does not have the app installed
-    sendLinkText: 'Send Link',              // Text to show on desktop button to allow users to text themselves the app
-    iframe: true,                           // Show banner in an iframe, recomended to isolate Branch banner CSS
-    disableHide: false,                     // Should the user have the ability to hide the banner? (show's X on left side)
-    forgetHide: true,                      // Should we show the banner after the user closes it? Can be set to true, or an integer to show again after X days
-    position: 'top',                        // Sets the position of the banner, options are: 'top' or 'bottom', and the default is 'top'
-    mobileSticky: false,                    // Determines whether the mobile banner will be set `position: fixed;` (sticky) or `position: absolute;`, defaults to false *this property only applies when the banner position is 'top'
-    desktopSticky: true,                    // Determines whether the desktop banner will be set `position: fixed;` (sticky) or `position: absolute;`, defaults to true *this property only applies when the banner position is 'top'
-    customCSS: '.title { color: #F00; }',   // Add your own custom styles to the banner that load last, and are gauranteed to take precedence, even if you leave the banner in an iframe
-    make_new_link: true,                 // Should the banner create a new link, even if a link already exists?
-    open_app: true                        // Should the banner try to open the app passively (without the user actively clicking) on load?
-}, {
-    data: {
-        "$og_title": "Fair And Square",
-        "deeplink_text": "Created from Smart Banner Test Page"
-    }  
-});
-branch.deepview({
-  data: {
-    "$og_title": "Fair And Square",
-    "deeplink_text": "Created from Smart Banner Test Page",
-    "$desktop_url": "http://hf.forevernetworks.com/9Hrk/Oa0OEfzjSs"
-  },
-    feature: "feature",
-    channel: "channel",
-    tags: [ ['tag1'],['tag2'] ],
-    stage: "stage"
-  }, {
-    open_app: false,
-    make_new_link: false
-  }, function(err) {
-    console.log(err || 'no error');
-});
+    (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-v1.6.7.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"init data first addListener removeListener setIdentity logout track link sendSMS referrals credits creditHistory applyCode validateCode getCode redeem banner closeBanner".split(" "), 0);
+    branch.init('key_live_pncDSeYT1WCuC2yVQ37WqhjmyrgHBgYt');
+    branch.banner({ icon: 'http://cdn-assets.alltrails.com/assets/icons/branch-app-icon-128x128_big.png', title: 'AllTrails', description: 'Your guide to the outdoors', openAppButtonText: 'Open in app', downloadAppButtonText: 'Install app', showiOS: true, showAndroid: true, showiPad: false, showDesktop: false, iframe: true, disableHide: false, forgetHide: 7, position: 'top', customCSS: '#branch-banner .content { background: #EFEFEF; } #branch-banner .content .left .details .title { color: #000000; font-size: 16px; font-weight: bold; } #branch-banner .description { height:30px;background: url(http://cdn-assets.alltrails.com/assets/icons/branch-icon-star-rating@2x.png) 88px 15px no-repeat; background-size: 76px 14px; } #branch-mobile-action { background: #6DA14B; padding: 6px 10px; border-radius: 5px; } #branch-banner a { color: #FFFFFF; } #branch-sms-send { color: #FFFFFF; background: #6DA14B; padding: 6px 10px; border-radius: 5px; }', }, { data: { $ios_deeplink_path: "", $android_deeplink_path: "" } });
 </script>
 
   </head>
